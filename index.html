@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huellitas Felices - Cuidado de Mascotas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Barra de Navegación -->
+    <nav class="bg-white shadow-sm py-4 px-8 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <div class="bg-[#f59e0b] text-white w-10 h-10 flex items-center justify-center rounded-full text-xl">
+                <i class="fa-solid fa-paw"></i>
+            </div>
+            <span class="text-xl font-extrabold text-gray-900">Huellitas<span class="text-[#f59e0b]">Felices</span></span>
+        </div>
+        <div class="hidden md:flex gap-6 text-sm text-gray-600 font-medium">
+            <a href="#" class="hover:text-gray-900">Servicios y Precios</a>
+            <a href="#" class="hover:text-gray-900">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Sección de Servicios -->
+    <main class="max-w-6xl mx-auto py-12 px-4 flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Tarjeta 1: Por Horas -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
+                <div class="bg-[#f59e0b] text-white w-12 h-12 flex items-center justify-center rounded-xl text-xl mb-6 shadow-sm">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-gray-900">Cuidado por Horas</h3>
+                <p class="text-gray-500 text-sm mb-6 flex-grow">¿Sales unas horas al médico o a hacer trámites? Cuido a tu mascota por bloques cortos de tiempo.</p>
+                <hr class="border-gray-100 mb-4">
+                <div class="flex justify-between items-end">
+                    <div>
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-wide mb-1">Precio por hora</p>
+                        <p class="text-2xl font-black text-gray-900">$3.000 <span class="text-xs font-bold text-gray-400">CLP</span></p>
+                    </div>
+                    <span class="bg-[#f59e0b] text-white text-xs font-bold px-3 py-1.5 rounded-full">Ideal Par de Horas</span>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Paseo -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
+                <div class="bg-slate-900 text-white w-12 h-12 flex items-center justify-center rounded-xl text-xl mb-6 shadow-sm">
+                    <i class="fa-solid fa-dog"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-gray-900">Pasear</h3>
+                <p class="text-gray-500 text-sm mb-6 flex-grow">Paseo enérgico y entretenido por el barrio para que tu perro gaste energía, explore y haga sus necesidades feliz.</p>
+                <hr class="border-gray-100 mb-4">
+                <div class="flex justify-between items-end">
+                    <div>
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-wide mb-1">Precio por paseo (45 min)</p>
+                        <p class="text-2xl font-black text-gray-900">$5.000 <span class="text-xs font-bold text-gray-400">CLP</span></p>
+                    </div>
+                    <span class="bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-full">Paseo Diario</span>
+                </div>
+            </div>
+
+
+            <!-- Tarjeta 3: Promo Cuidado + Paseo -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
+                <div class="bg-[#f59e0b] text-white w-12 h-12 flex items-center justify-center rounded-xl text-xl mb-6 shadow-sm">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-gray-900">Promo: Cuidado + Paseo</h3>
+                <p class="text-gray-500 text-sm mb-6 flex-grow">El paquete ideal. Cuido a tu mascota por un par de horas y además la llevo a dar un paseo enérgico por el barrio.</p>
+                <hr class="border-gray-100 mb-4">
+                <div class="flex justify-between items-end">
+                    <div>
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-wide mb-1">Precio Promocional</p>
+                        <!-- Puse $7.000 como ejemplo, puedes cambiarlo al precio que consideres -->
+                        <p class="text-2xl font-black text-gray-900">$7.000 <span class="text-xs font-bold text-gray-400">CLP</span></p>
+                    </div>
+                    <span class="bg-[#d97706] text-white text-xs font-bold px-3 py-1.5 rounded-full">Promo Especial</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Sección de Contacto (Fondo Naranja) -->
+    <section class="bg-[#f59e0b] py-16 px-4">
+        <div class="max-w-2xl mx-auto bg-white rounded-3xl p-10 shadow-xl">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Reserva o Consulta por WhatsApp</h2>
+                <p class="text-gray-500 text-sm">Escríbeme los datos y se abrirá tu WhatsApp con el mensaje listo para enviar.</p>
+            </div>
+            
+            <form onsubmit="procesarReserva(event)" class="space-y-6">
+                <!-- Nombre -->
+                <div>
+                    <label for="nombre" class="block text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">Tu Nombre</label>
+                    <input type="text" id="nombre" required placeholder="Alonso" 
+                           class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#f59e0b] focus:border-transparent text-gray-700">
+                </div>
+                
+                <!-- Servicio -->
+                <div>
+                    <label for="servicio" class="block text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">Servicio que necesitas</label>
+                    <select id="servicio" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#f59e0b] focus:border-transparent text-gray-700 bg-white">
+                        <option value="Cuidado por Horas">Cuidado por Horas ($3.000/hr)</option>
+                        <option value="Solo Pasear">Solo Pasear ($5.000/paseo)</option>
+                        <option value="Promo: Cuidado + Paseo">Promo: Cuidado + Paseo ($7.000)</option>
+                    </select>
+                </div>
+                
+                <!-- Detalles -->
+                <div>
+                    <label for="detalles" class="block text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">Detalles o mascota (Ej. nombre del perrito y horas)</label>
+                    <textarea id="detalles" rows="3" required placeholder="De 20:00 a 21:00 el jueves" 
+                              class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#f59e0b] focus:border-transparent text-gray-700 resize-none"></textarea>
+                </div>
+                
+                <!-- Botón -->
+                <button type="submit" class="w-full bg-[#10b981] hover:bg-[#059669] text-white font-bold py-4 px-4 rounded-xl mt-2 transition-colors flex justify-center items-center gap-2 shadow-sm">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Enviar Mensaje por WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function procesarReserva(event) {
+            event.preventDefault(); 
+
+            try {
+                const nombre = document.getElementById('nombre').value;
+                const servicio = document.getElementById('servicio').value;
+                const detalles = document.getElementById('detalles').value;
+
+                // Envío al servidor Node.js local
+                fetch('/api/bookings', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: nombre,
+                        phone: "Enviado a WhatsApp", 
+                        serviceType: servicio,
+                        notes: detalles
+                    })
+                }).catch(error => console.error("Aviso: El servidor local no está corriendo o hubo un error:", error));
+
+                // Apertura de WhatsApp
+                const numero = "56957009769"; 
+                const mensaje = `¡Hola! Me gustaría cotizar/reservar un servicio.\n\n*Nombre:* ${nombre}\n*Servicio:* ${servicio}\n*Detalles:* ${detalles}`;
+                
+                const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+                window.open(url, '_blank');
+
+            } catch (error) {
+                console.error("Error procesando el formulario:", error);
+                alert("Ocurrió un error al procesar los datos. Por favor intenta nuevamente.");
+            }
+        }
+    </script>
+</body>
+</html>
